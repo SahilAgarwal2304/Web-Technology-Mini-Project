@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us - School Annual Function</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Contact Us 📞</h1>
+</header>
+
+<nav>
+    <div class="logo">Annual Fest</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="about.html">About</a>
+        <a href="sponsors.html">Sponsors</a>
+        <a href="committee_login.html">Committee login</a>
+        <a href="contact.html">Contact us</a>
+        <a href="parents_login.html">Parents login</a>
+    </div>
+</nav>
+
+<div class="container">
+
+    <!-- School Contact Information -->
+    <div class="card">
+        <h2>School Contact Details 🏫</h2>
+        <p><strong>Address:</strong> Sunshine Public School, MG Road, Pune, Maharashtra, India</p>
+        <p><strong>Phone:</strong> +91 98765 43210</p>
+        <p><strong>Email:</strong> info@sunshineschool.com</p>
+    </div>
+
+    <!-- Google Map -->
+    <div class="card">
+        <h2>Our Location 📍</h2>
+        <iframe 
+            src="https://www.google.com/maps?q=Pune,Maharashtra&output=embed"
+            width="100%" 
+            height="300" 
+            style="border:0; border-radius:10px;"
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="card">
+        <h2>Send Us a Message ✉</h2>
+
+        <form onsubmit="return validateForm()">
+            <input type="text" id="name" placeholder="Your Name" style="width:100%; padding:10px; margin:10px 0;">
+            
+            <input type="email" id="email" placeholder="Your Email" style="width:100%; padding:10px; margin:10px 0;">
+            
+            <textarea id="message" placeholder="Your Message" 
+                style="width:100%; padding:10px; margin:10px 0; height:100px;">
+            </textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 School Annual Function | All Rights Reserved
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+function validateForm() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+
+    if(name === "" || email === "" || message === "") {
+        alert("All fields are required!");
+        return false;
+    }
+
+    alert("Message sent successfully!");
+    return true;
+}
+</script>
+
+</body>
+</html>

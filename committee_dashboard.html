@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Committee Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadDashboard()">
+
+<header>
+    <h1>Committee Dashboard 📊</h1>
+</header>
+
+<div class="container">
+
+    <!-- Statistics -->
+    <div class="card">
+        <h2>Statistics</h2>
+        <p>Total Registrations: <span id="totalReg">0</span></p>
+        <p>Total Ticket Bookings: <span id="totalTickets">0</span></p>
+    </div>
+
+    <!-- Event-wise Participants -->
+    <div class="card">
+        <h2>Event-wise Participant Count</h2>
+        <ul id="eventList"></ul>
+    </div>
+
+    <!-- Add Event -->
+    <div class="card">
+        <h2>Add Event</h2>
+        <input type="text" id="newEvent" placeholder="Event Name" style="padding:8px;">
+        <button onclick="addEvent()">Add</button>
+    </div>
+
+    <!-- Events Table -->
+    <div class="card">
+        <h2>Manage Events</h2>
+        <table id="eventsTable">
+            <tr>
+                <th>Event</th>
+                <th>Actions</th>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Approve Registrations -->
+    <div class="card">
+        <h2>Approve Registrations</h2>
+        <button onclick="approveRegistration()">Approve All</button>
+        <p id="approvalStatus"></p>
+    </div>
+
+</div>
+
+<script src="committee.js"></script>
+</body>
+</html>
